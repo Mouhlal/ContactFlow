@@ -59,7 +59,7 @@ export const authOptions = {
   },
 
   pages: {
-    signIn: "/login", // Page de connexion personnalisée
+    signIn: "/login", 
   },
 
   secret: process.env.NEXTAUTH_SECRET, // À définir dans ton .env
