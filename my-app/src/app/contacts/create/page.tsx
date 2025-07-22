@@ -10,7 +10,8 @@ export default function CreateContactForm() {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        departement: ''
+        departement: '',
+        phone: '',
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [success, setSuccess] = useState(false);
@@ -125,6 +126,22 @@ export default function CreateContactForm() {
                                 required
                                 className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
                                 placeholder="Ressources Humaines"
+                            />
+                        </div>
+
+                        <div className="space-y-1">
+                            <label className="block text-sm font-medium text-gray-700 flex items-center">
+                                <FiBriefcase className="mr-2 text-gray-400" />
+                                Phone
+                            </label>
+                            <input
+                                type="text"
+                                name="phone"
+                                value={formData.phone}
+                                onChange={handleChange}
+                                required
+                                className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                                placeholder="+212 ... | 07/6 ..."
                             />
                         </div>
 

@@ -1,22 +1,17 @@
+"use client";
 import type { Metadata } from "next";
 import "./globals.css";
 
 
-export const metadata: Metadata = {
-  title: "Contact App",
-  description: "Contact application used for save your contacts",
-};
+import { SessionProvider } from "next-auth/react";
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body
-      >
-        {children}
+    <html lang="fr">
+      <body>
+        <SessionProvider>
+          {children}
+        </SessionProvider>
       </body>
     </html>
   );

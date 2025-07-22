@@ -9,6 +9,7 @@ interface Contact {
   name: string;
   email: string;
   departement: string;
+  phone: string;
 }
 
 export default function Update() {
@@ -123,6 +124,21 @@ export default function Update() {
                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
                             />
                         </div>
+
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1 flex items-center">
+                                <FiMail className="mr-2 text-gray-400" />
+                                Phone
+                            </label>
+                            <input
+                                type="phone"
+                                value={contact.phone}
+                                onChange={(e) => setContact({...contact, phone: e.target.value})}
+                                required
+                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                            />
+                        </div>
+
 
                         <div>
                             <label className="block text-sm font-medium text-gray-700 mb-1 flex items-center">
